@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="7706" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="7703"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Jelloween - Machinato Light.ttf">
+            <string>Machinato-Light</string>
+        </mutableArray>
+        <mutableArray key="Jelloween - Machinato.ttf">
+            <string>Machinato</string>
+        </mutableArray>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="103" id="KGk-i7-Jjw" customClass="ChatCell">
+            <rect key="frame" x="0.0" y="0.0" width="324" height="103"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="43"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Username" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n92-Oq-3Q8">
+                        <rect key="frame" x="78" y="8" width="87" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="23" id="tiN-2y-5DV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Machinato" family="Machinato" pointSize="19"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="eCb-1G-qtw">
+                        <rect key="frame" x="8" y="16" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="40" id="dPN-OK-5hb"/>
+                            <constraint firstAttribute="height" constant="40" id="mSX-PH-n3w"/>
+                        </constraints>
+                    </imageView>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" tag="2" contentMode="scaleToFill" bounces="NO" scrollEnabled="NO" editable="NO" text="Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore e" translatesAutoresizingMaskIntoConstraints="NO" id="30Y-cM-wdc">
+                        <rect key="frame" x="78" y="35" width="214" height="32"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="32" id="yho-e6-StX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Machinato-Light" family="Machinato" pointSize="15"/>
+                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                        <connections>
+                            <outlet property="delegate" destination="KGk-i7-Jjw" id="7iU-cY-ZBD"/>
+                        </connections>
+                    </textView>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="30Y-cM-wdc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" constant="70" id="50i-fa-fNI"/>
+                    <constraint firstItem="eCb-1G-qtw" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leadingMargin" id="5b6-oU-gyA"/>
+                    <constraint firstItem="eCb-1G-qtw" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" constant="8" id="5kU-JT-7Ps"/>
+                    <constraint firstItem="n92-Oq-3Q8" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="topMargin" id="7S5-j1-stH"/>
+                    <constraint firstItem="n92-Oq-3Q8" firstAttribute="leading" secondItem="eCb-1G-qtw" secondAttribute="trailing" constant="30" id="9Q5-HG-AKH"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="30Y-cM-wdc" secondAttribute="trailing" constant="24" id="V2H-Lp-usm"/>
+                    <constraint firstItem="30Y-cM-wdc" firstAttribute="top" secondItem="n92-Oq-3Q8" secondAttribute="bottom" constant="4" id="tqB-DJ-qpe"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="messageTextView" destination="30Y-cM-wdc" id="Qjw-mg-aEn"/>
+                <outlet property="userIcon" destination="eCb-1G-qtw" id="MFe-K2-yKP"/>
+                <outlet property="usernameLabel" destination="n92-Oq-3Q8" id="imI-eL-nk0"/>
+            </connections>
+            <point key="canvasLocation" x="246" y="293.5"/>
+        </tableViewCell>
+    </objects>
+</document>
